@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int o(int arr[1],int n){
+	
+	int temp,fin;
+	for(int a=0;a<n;a++){
+		if(temp<arr[a]){
+			temp=arr[a];
+			fin=a;
+		
+		}
+	}
+	return fin;
+}
+
+int main(){
+	
+	srand(time(NULL));
+	int arr[100];
+	for(int a=0; a<100; a++){
+			arr[a]=rand()%100-50;
+			printf("%d ",arr[a]);
+	}
+	printf("\nMenor: %d",o(arr,100));
+	
+	return 0;
+}
