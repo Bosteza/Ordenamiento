@@ -1,29 +1,38 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
-int o(int arr[1],int n){
+
 	
-	int temp,fin;
-	for(int a=0;a<n;a++){
-		if(temp<arr[a]){
-			temp=arr[a];
-			fin=a;
-		
-		}
-	}
-	return fin;
+ int find(int b[], int l){
+ 	int a, index;
+ 	
+ 	a=10000000;
+ 	index=-1;
+ 	
+ 	for(int i=0;i<l;i++)
+ 		if(b[i]<a)
+ 		{
+ 				a=b[i];
+ 				index=i;
+ 		} 
+    
+	return index;
 }
 
 int main(){
 	
+	int l=50;
+	int b[l];
+	
 	srand(time(NULL));
-	int arr[100];
-	for(int a=0; a<100; a++){
-			arr[a]=rand()%100-50;
-			printf("%d ",arr[a]);
+	
+	for(int i=0;i<l;i++)
+	{
+		b[i]=rand()%100-50;
+		printf(" %d ",b[i]);
 	}
-	printf("\nMenor: %d",o(arr,100));
+	printf("\n\nMin value: \t%d", b[find(b,l)]);
 	
 	return 0;
-}
+} 
