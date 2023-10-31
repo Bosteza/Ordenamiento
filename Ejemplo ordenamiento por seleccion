@@ -1,0 +1,23 @@
+	int i,j,n,temp=0,posicion=0;
+	
+	
+	for(i=0;i<n;i++){
+		posicion=i;
+		for(j=i+1;j<n;j++)
+		{
+			if(b[posicion]>b[j])
+			posicion=j;
+		}
+		if(posicion !=i)
+		{
+			temp=b[i];
+			b[i]=b[posicion];
+			b[posicion]=temp;
+		}
+	}
+	
+	printf("Lista ordenada\n");
+	for(i=0;i<n;i++)
+		printf("%d",b[i]);
+	return 0;
+} 
