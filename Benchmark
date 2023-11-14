@@ -2,54 +2,21 @@
 #include <time.h>
 #include <stdlib.h>
 
-//Se escribe la funcion
-//int buscarElemento(int lista[], int num, int ele);
+//Se declara función
 
 int main(void) {
-	//Benchmark
+	
+    // Benchmark
     clock_t tic = clock();
 
-//inicio funcion
-    /*/int i, num, ele, bandera = 0;
-
-    srand(time(NULL));
-    printf("Num de elementos a crear\n");
-    scanf("%d", &num);
-    int lista[num];
-    printf("Elemento a buscar\n");
-    scanf("%d", &ele);
-
-    for (i = 0; i < num; i++) {
-        lista[i] = rand() % (10 + 1 - 1) + 1;
-    }
-
-    printf("Elementos de la lista\n");
-    for (i = 0; i < num; i++) {
-        printf("%d ", lista[i]);
-    }
-    printf("\n");
-
-    int posicion = buscarElemento(lista, num, ele);
-
-    if (posicion != -1) {
-        printf("Elemento en la posicion: %d\n", posicion + 1);
-    } else {
-        printf("Elemento no se encuentra\n");
-    }/*/
+    // Inicio función
     
-//Benchmark
+
+    // Benchmark
     clock_t toc = clock();
-    printf("Elapsed: %f seconds\n", (double)(toc - tic) / CLOCKS_PER_SEC);
+    printf("\nElapsed: %f seconds\n", (double)(toc - tic) / CLOCKS_PER_SEC);
 
     return 0;
 }
-/*/Fin funcion
-int buscarElemento(int lista[], int num, int ele) {
-    int i;
-    for (i = 0; i < num; i++) {
-        if (lista[i] == ele) {
-            return i;
-        }
-    }
-    return -1;
-}/*/
+
+//Fin función
